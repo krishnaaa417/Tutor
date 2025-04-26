@@ -10,7 +10,8 @@ namespace Tutor.Strings
     {
         static void Main(string[] args)
         {
-            palindrome();
+            // palindrome();
+            AnotherApproachToFindPalindrome();
         }
 
         private static void palindrome()
@@ -44,7 +45,30 @@ namespace Tutor.Strings
         }
 
 
-        
+        private static void AnotherApproachToFindPalindrome()
+        {
+            Console.WriteLine("please enter a string");
+            string s = Console.ReadLine();
+            char[] c = s.ToCharArray();
+
+            int left = 0;
+            int right = c.Length - 1;
+
+            for (int i = 0; i < c.Length / 2; i++)
+            {
+                if (c[left] != c[right])
+                {
+                    Console.WriteLine("Not a  palindrome.."+s);
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("palindrome." + s);
+                    break;
+                }
+            }
+           
+        }
 
     }
 }
