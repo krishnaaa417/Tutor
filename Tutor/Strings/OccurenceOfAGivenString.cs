@@ -10,7 +10,8 @@ namespace Tutor.Strings
     {
         static void Main(string[] args)
         {
-            Occurence();
+            //Occurence();
+            NonMatchingCharctersInaString();
         }
 
         private static void Occurence()
@@ -28,6 +29,34 @@ namespace Tutor.Strings
                 }
             }
             Console.WriteLine(count);
+        }
+
+        private static void NonMatchingCharctersInaString()
+        {
+            string s = Console.ReadLine();
+           // char[] c = s.ToCharArray();
+            bool b;
+
+            for (int i = 0; i < s.Length; i++)  // i =0
+            {
+                // I'm assuming each and every character is unique
+                b = true;
+
+                for (int j = 0; j < s.Length; j++)
+                {
+                   if (i != j && s[i] == s[j])
+                    {
+                        b = false;
+                        break;
+                    }
+                }
+
+                if (b)
+                {
+                    Console.WriteLine(s[i]);
+                }
+            }
+           
         }
     }
 }
