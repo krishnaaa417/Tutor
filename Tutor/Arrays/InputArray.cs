@@ -14,6 +14,7 @@ namespace Tutor.Arrays
             // Console.WriteLine(SumOfElements(nums));
             //Console.WriteLine(MaxInArray(nums));
             //Console.WriteLine(MinInArray(nums));
+            Console.WriteLine(SecondLargestNumber(nums));
         }
 
         private static int SumOfElements(int[] nums)
@@ -51,6 +52,11 @@ namespace Tutor.Arrays
                 }
             }
             return min;
+        }
+
+        private static int SecondLargestNumber(int[] nums)
+        {
+          
         }
 
 
