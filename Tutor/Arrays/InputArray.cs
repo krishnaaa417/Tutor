@@ -56,7 +56,22 @@ namespace Tutor.Arrays
 
         private static int SecondLargestNumber(int[] nums)
         {
-          
+            int firstvalue = 0;
+            int secondvalue = 0;
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] > firstvalue)
+                {
+                    secondvalue = firstvalue;
+                    firstvalue = nums[i];
+                }
+                else if (nums[i] > secondvalue && nums[i] != firstvalue)
+                {
+                    secondvalue = nums[i];
+                }
+            }
+            return secondvalue;
         }
 
 
