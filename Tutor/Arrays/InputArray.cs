@@ -22,16 +22,11 @@ namespace Tutor.Arrays
 
             int[] array = new int[size];
 
-            Console.WriteLine("please enter the age.");
-            array[0] = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("please enter the age.");
-            array[1] = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("please enter the age.");
-            array[2] = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("please enter the age.");
-            array[3] = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("please enter the age.");
-            array[4] = Convert.ToInt32(Console.ReadLine());
+           for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine("please enter you number");
+                array[i] = Convert.ToInt32(Console.ReadLine());
+            }
 
             for (int i = 0; i < array.Length; i++)
             {
