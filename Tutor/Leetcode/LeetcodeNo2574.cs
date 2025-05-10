@@ -25,14 +25,27 @@ namespace Tutor.Leetcode
             {
                 leftsum[i] = leftsum[i - 1] + nums[i-1];
             }
-            return leftsum;
+            //return leftsum;
 
             int[] rightsum = new int[n];
-            rightsum[0] = 0;
+            //int sum = 0;
 
-            for (int i = 1; i < n; i++)
+            //for (int i = n - 1; i >= 0; i--)
+            //{
+            //    rightsum[i] = sum;
+            //    sum += nums[i];
+            //}
+
+            // return rightsum;
+
+            // Another-Approach..
+
+            for (int i = n - 2; i >= 0; i--)
             {
+                rightsum[i] = rightsum[i + 1] + nums[i + 1];
             }
+
+           return rightsum;
         }
     }
 }
