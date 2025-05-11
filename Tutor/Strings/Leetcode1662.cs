@@ -10,7 +10,19 @@ namespace Tutor.Strings
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Leetcode1662");
+            string[] word1 = { "ab", "c" };
+            string[] word2 = { "a", "bc" };
+            string word3 = string.Join("", word1);
+            string word4 = string.Join("", word2);
+            if (word3 == word4)
+            {
+                Console.WriteLine("true");
+              
+            }
+            else
+            {
+                Console.WriteLine("False");
+            }
         }
     }
 }
