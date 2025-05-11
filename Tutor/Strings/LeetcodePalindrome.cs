@@ -10,9 +10,40 @@ namespace Tutor.Strings
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Leetcode");
+            string[] words = { "abc", "car", "ada", "racecar", "cool" };
+
+            for (int i = 0; i < words.Length; i++)
+            {
+                if (IsPalindome(words[i]) == true)
+                {
+                    Console.WriteLine(words[i]);
+                    break;
+                }
+            }
         }
 
+        private static bool IsPalindome(string word)
+        {
+           
+            int n = word.Length;
+            // here I'm using two pointer approach to find the palindrome
 
+            int left = 0;
+            int right = n - 1;
+
+            while (left < right)
+            {
+                if (word[left] != word[right])
+                {
+                    return false;
+                }
+                left++;
+                right--;
+            }
+            return true;
+
+
+            
+        }
     }
 }
