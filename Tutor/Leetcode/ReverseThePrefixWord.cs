@@ -14,7 +14,7 @@ namespace Tutor.Leetcode
             char ch = 'd';
             
            
-            Console.WriteLine(ReversePrefix(word,ch));
+            Console.WriteLine(ReverseThePrefix(word,ch));
         }
 
         //public  static string ReversePrefix(string word, char ch)
@@ -36,5 +36,29 @@ namespace Tutor.Leetcode
 
         //    return word;
         //}
+
+        private static string ReverseThePrefix(string word, char ch)
+        {
+            int index = word.IndexOf(ch);
+            if (index == -1)
+            {
+                return word;
+            }
+
+            char[] c = word.ToCharArray();
+            int left = 0;
+            int right = index;
+
+            while (left < right)
+            {
+                char temp = c[left];
+                c[left] = c[right];
+                c[right] = temp;
+                left++;
+                right--;
+            }
+
+            return new string(c);
+        }
     }
 }
