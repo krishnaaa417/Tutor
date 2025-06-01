@@ -16,7 +16,23 @@ namespace Tutor.SlidingWindow
 
         private static int BruteForceApproach(int[] nums)
         {
-           
+            int maxsum = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                int sum = 0;
+                for (int j = i; j < nums.Length-4; j++)
+                {
+                    sum += nums[j];
+                    if (sum > maxsum)
+                    {
+                        maxsum = sum;
+                    }
+                    
+                }
+
+
+            }
+            return maxsum;
         }
     }
 }
