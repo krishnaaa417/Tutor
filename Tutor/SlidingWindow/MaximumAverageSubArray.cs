@@ -17,8 +17,20 @@ namespace Tutor.SlidingWindow
 
         private static double BruteForceApproach(int[] nums, int k)
         {
-            double d = 10.00;
-            return  d;
+           int n = nums.Length;
+            double maxAverage = 0.00;
+            for (int i = 0; i < n - k + 1; i++)
+            {
+                double sum = 0;
+                for (int j = i; j < i + k; j++)
+                {
+                    sum += nums[j]; 
+                }
+                double average = sum / k;
+
+                maxAverage = Math.Max(maxAverage, average);
+            }
+            return maxAverage;
         }
     }
 }

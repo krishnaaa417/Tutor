@@ -20,17 +20,14 @@ namespace Tutor.SlidingWindow
             for (int i = 0; i < nums.Length; i++)
             {
                 int sum = 0;
-                for (int j = i; j < nums.Length-4; j++)
+                for (int j = i; j < nums.Length - 4; j++)
                 {
                     sum += nums[j];
                     if (sum > maxsum)
                     {
                         maxsum = sum;
                     }
-                    
                 }
-
-
             }
             return maxsum;
         }
