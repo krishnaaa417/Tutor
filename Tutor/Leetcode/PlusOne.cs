@@ -12,9 +12,13 @@ namespace Tutor.Leetcode
         static void Main(string[] args)
         {
             //Console.WriteLine("please enter an array size");
-            int[] ints = { 1,2,3 };
+            int[] a = new int[5];
+          for (int i = 0; i < a.Length; i++)
+            {
+                Console.Write(a[i]+",");
+            }
 
-            Console.WriteLine(string.Join(", ", plusOne(ints)));
+           // Console.WriteLine(string.Join(", ", plusOne(ints)));
 
             // expected output = {1,2,9}
         }

@@ -11,7 +11,8 @@ namespace Tutor.SlidingWindow
         static void Main(string[] args)
         {
             int[] nums = { 2, 3, 5, 7, 2, 5, 1, 3, 2 };
-            Console.WriteLine(BruteForceApproach(nums));
+            //Console.WriteLine(BruteForceApproach(nums));
+            Console.WriteLine(OptimizedOne(nums));
         }
 
         private static int BruteForceApproach(int[] nums)
@@ -30,6 +31,31 @@ namespace Tutor.SlidingWindow
                 }
             }
             return maxsum;
+        }
+
+        private static int OptimizedOne(int[] nums)
+        {
+            int n= nums.Length;
+            int subArray = 4;
+            int sum = 0;
+            int left = 0;
+            int right = subArray;
+            int max = int.MinValue;
+
+            for (int i = 0; i < subArray; i++)
+            {
+                sum = sum + nums[i];
+            }
+            max = sum;
+
+           for ( right = subArray; right < n; right++)
+            {
+                sum = sum - nums[left]+nums[right];
+                left++;
+                max = Math.Max(max, sum);
+            }
+            return max;
+
         }
     }
 }

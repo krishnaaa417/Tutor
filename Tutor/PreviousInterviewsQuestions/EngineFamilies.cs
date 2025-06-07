@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace Tutor.PreviousInterviewsQuestions
 {
-    internal class EngineFamilies
+    public class EngineFamilie
     {
+        
+       // public void  EngineFamilies()
+       // {
+       //     Console.WriteLine("IFamilyEngine calling");
+       // }
 
+       //public  void EngineFamilies()
+       // {
+       //     Console.WriteLine("IEngine Calling.");
+       // }
     }
 }

@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tutor.BitManipulation
+namespace Tutor.Leetcode
 {
-    internal class SingleNumber2
+    internal class ValidAnagrams
     {
         static void Main(string[] args)
         {
-            
+            string s1 = "anagram";
+            string s2 = "nagaram";
+            Console.WriteLine(s1.Contains(s2));
         }
     }
 }

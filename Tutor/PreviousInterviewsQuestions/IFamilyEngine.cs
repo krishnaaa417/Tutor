@@ -8,6 +8,6 @@ namespace Tutor.PreviousInterviewsQuestions
 {
     internal interface IFamilyEngine
     {
-
+        void EngineFamilies();
     }
 }

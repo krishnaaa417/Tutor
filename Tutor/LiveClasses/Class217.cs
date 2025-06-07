@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tutor.PreviousInterviewsQuestions
+namespace Tutor.LiveClasses
 {
-    internal interface IEngine
+    internal class Class217
     {
-        void EngineFamilies();
     }
 }

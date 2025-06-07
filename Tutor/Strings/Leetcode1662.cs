@@ -10,19 +10,24 @@ namespace Tutor.Strings
     {
         static void Main(string[] args)
         {
-            string[] word1 = { "ab", "c" };
-            string[] word2 = { "a", "bc" };
-            string word3 = string.Join("", word1);
-            string word4 = string.Join("", word2);
-            if (word3 == word4)
-            {
-                Console.WriteLine("true");
-              
-            }
-            else
-            {
-                Console.WriteLine("False");
-            }
+            //string[] word1 = { "ab", "c" };
+            //string[] word2 = { "a", "bc" };
+            //string word3 = string.Join("", word1);
+            //string word4 = string.Join("", word2);
+            //if (word3 == word4)
+            //{
+            //    Console.WriteLine("true");
+
+            //}
+            //else
+            //{
+            //    Console.WriteLine("False");
+            //}
+
+            string s = "Hello";
+            StringBuilder sb = new StringBuilder();
+            sb.Append(s);
+            Console.WriteLine(sb.ToString());
         }
     }
 }

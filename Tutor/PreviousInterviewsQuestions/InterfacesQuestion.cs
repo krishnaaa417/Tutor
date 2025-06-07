@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Tutor.PreviousInterviewsQuestions
 {
-    internal class InterfacesQuestion
+    public  class InterfacesQuestion
     {
-
+        static void Main(string[] args)
+        {
+           
+            
+        }
     }
 }

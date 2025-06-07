@@ -12,10 +12,10 @@ namespace Tutor.BinarySearch
         {
             int[] nums = { 1, 0, 3, 5, 9, 12 };
             int target = 9;
-            Console.WriteLine();
+            Console.WriteLine(search(nums,target));
         }
 
-        public int search(int[] nums, int target)
+        private static int search(int[] nums, int target)
         {
             int low = 0;
             int high = nums.Length - 1;

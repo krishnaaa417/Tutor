@@ -11,7 +11,7 @@ namespace Tutor.BinarySearch
         static void Main(string[] args)
         {
             int[] nums = { 1, 0, 3, 5, 9, 12 };
-            int target = 9;
+            int target = 13;
             Console.WriteLine(FindIndex(nums,target));
         }
 
