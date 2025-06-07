@@ -11,7 +11,7 @@ namespace Tutor.TwoPointerApproach
         static void Main(string[] args)
         {
             int[] nums = { 1, 1, 2 ,2,33,44,44};
-            Console.WriteLine(BruteForceApproach(nums));
+            Console.WriteLine(OptimizedApproach(nums));
         }
 
         private static int BruteForceApproach(int[] nums)
@@ -54,6 +54,27 @@ namespace Tutor.TwoPointerApproach
 
             return uniqueCount; // New length of unique numbers
         }
+
+        private static int OptimizedApproach(int[] nums)
+        {
+            int n = nums.Length;
+            int index = 0;
+            for (int i = 1; i < n; i++)
+            {
+                if (nums[i] != nums[index])
+                {
+                    index++;
+                    nums[index]=nums[i];
+                }
+            }
+
+            for (int i = 0; i <= index; i++)
+            {
+                Console.WriteLine(nums[i]);
+            }
+            Console.WriteLine();
+            return index + 1;
+        }
        
     }
-}
+}///Vaishnavi Sapkal
