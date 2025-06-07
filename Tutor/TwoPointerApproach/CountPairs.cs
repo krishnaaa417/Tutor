@@ -32,5 +32,29 @@ namespace Tutor.TwoPointerApproach
             }
            return count;
         }
+    
+        private static int OptimizedApproach(int[] nums, int target)
+        {
+            Array.Sort(nums);
+            int n = nums.Length;
+            int count = 0;
+            int left = 0;
+            int right = n - 1;
+
+            while (left < right)
+            {
+                if (nums[left] + nums[right] < target)
+                {
+                    count = count + (right-left);
+                    left++;
+                }
+                else
+                {
+                    right--;
+                }
+            }
+            return count;
+        }
     }
+
 }
