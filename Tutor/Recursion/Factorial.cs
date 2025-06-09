@@ -11,7 +11,7 @@ namespace Tutor.Recursion
         static void Main(string[] args)
         {
             int n = 4;
-            Console.WriteLine(Recursion(n));
+            Console.WriteLine(Factors(5));
         }
 
         private static int BruteForceApproach(int n)
@@ -28,6 +28,16 @@ namespace Tutor.Recursion
         {
             if (n == 1) return 1;
             return (n * Recursion(n - 1));
+        }
+
+        private  static int Factors(int n)
+        {
+            int fact = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                fact = fact * i;
+            }
+            return fact;
         }
     }
 }
