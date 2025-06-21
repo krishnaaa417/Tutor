@@ -11,7 +11,8 @@ namespace Tutor.Stacks
         static void Main(string[] args)
         {
             int[] nums = new int[] { 73, 74, 75, 71, 69, 72, 76, 73 };
-            int[] result = BruteForceApproach(nums);
+            //int[] result = (nums);
+            int[] result = DailyTemperatures(nums);
             foreach (int i in result)
             {
                 Console.WriteLine(i+",");
@@ -39,6 +40,25 @@ namespace Tutor.Stacks
             return result;
         }
 
-        
+        public static int[] DailyTemperatures(int[] temperatures)
+        {
+            Stack<int> stack = new Stack<int>();
+            int[] result = new int[temperatures.Length];
+
+            for (int i = 0; i < temperatures.Length; i++)
+            {
+                while (stack.Count > 0 && temperatures[stack.Peek()] < temperatures[i])
+                {
+                    int index = stack.Pop();
+                    result[index] = i - index;
+                }
+                stack.Push(i);
+            }
+
+            return result;
+        }
+
+
+
     }
 }
