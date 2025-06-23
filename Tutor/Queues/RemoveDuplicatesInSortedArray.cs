@@ -22,14 +22,52 @@ namespace Tutor.Queues
                     nums[index] = nums[i];
                 }
             }
-            
+
             for (int i = 0; i <= index; i++)
             {
-                Console.WriteLine(nums[i]+",");
+                Console.WriteLine(nums[i] + ",");
             }
 
         }
 
-      
+        /*
+         * int[] nums = new int[] {11, 2, 1, 444, 2, 1, 233, 444};
+int n = nums.Length;
+int uniqueCount = 0;
+
+for (int i = 0; i < n; i++)
+{
+    bool isDuplicate = false;
+
+    // Check if nums[i] has appeared before
+    for (int j = 0; j < uniqueCount; j++)
+    {
+        if (nums[i] == nums[j])
+        {
+            isDuplicate = true;
+            break;
+        }
+    }
+
+    // If not a duplicate, place it into the front portion of the array
+    if (!isDuplicate)
+    {
+        nums[uniqueCount] = nums[i];
+        uniqueCount++;
+    }
+}
+
+Console.WriteLine("Unique values:");
+for (int i = 0; i < uniqueCount; i++)
+{
+    Console.Write(nums[i] + " ");
+}
+
+         * 
+         * 
+         * */
+
+
+
     }
 }
