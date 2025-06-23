@@ -10,7 +10,13 @@ namespace Tutor.Queues
     {
         static void Main(string[] args)
         {
-            int[] nums = new int[] { 1, 2, 2, 3, 3, 3, 4, 55, 55, 88, 999, 999, 1000 };
+            int[] nums = new int[] { 1, 1, 2, 2, 44, 55, 66, 77, 88, 88, 99, 999, 999 };
+           Remove(nums);
+        }
+
+        private static void Remove(int[] nums)
+        {
+            //two pointer things
             int n = nums.Length;
             int index = 0;
 
@@ -25,9 +31,9 @@ namespace Tutor.Queues
 
             for (int i = 0; i <= index; i++)
             {
-                Console.WriteLine(nums[i] + ",");
+                Console.WriteLine(nums[i]+",");
             }
-
+           
         }
 
         /*
