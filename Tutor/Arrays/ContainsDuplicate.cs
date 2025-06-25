@@ -21,7 +21,9 @@ namespace Tutor.Arrays
                 arr[i] = Convert.ToInt32(Console.ReadLine());
             }
 
-            Console.WriteLine(BruteForceApproach(arr));
+            //  Console.WriteLine(BruteForceApproach(arr));
+
+            Console.WriteLine(OptimisedApproach(arr));;
 
         }
 
@@ -37,6 +39,21 @@ namespace Tutor.Arrays
                     {
                         return true;
                     }
+                }
+            }
+            return false;
+        }
+
+        private static bool OptimisedApproach(int[] nums)
+        {
+            int n = nums.Length;
+            Array.Sort(nums);
+           
+            for (int i = 1; i < n; i++)
+            {
+                if (nums[i] == nums[i - 1])
+                {
+                    return true;
                 }
             }
             return false;
