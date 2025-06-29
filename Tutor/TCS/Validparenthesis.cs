@@ -10,7 +10,8 @@ namespace Tutor.TCS
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Valid-Parenthesis..");
+            string s = "()[]{}";
+            Console.WriteLine(IsValid(s));
         }
 
         private static bool IsValid(string s)
@@ -27,7 +28,7 @@ namespace Tutor.TCS
                 {
                     stack.Push(c);
                 }
-                else if (c == ')' && stack.Count > 0 && stack.Peek() == ')')
+                else if (c == ')' && stack.Count > 0 && stack.Peek() == '(')
                 {
                     stack.Pop();
                 }
