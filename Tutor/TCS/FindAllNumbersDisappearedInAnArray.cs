@@ -11,7 +11,12 @@ namespace Tutor.TCS
         static void Main(string[] args)
         {
             int[] nums = { 4, 3, 2, 7, 8, 2, 3, 1 };
-            Console.WriteLine("set.."+OptimizedApproach(nums));
+            var result = OptimizedApproach(nums);
+
+            foreach (int i in result)
+            {
+                Console.WriteLine(i);
+            }
         }
 
         private static IList<int> OptimizedApproach(int[] nums)
@@ -22,7 +27,7 @@ namespace Tutor.TCS
 
             for (int i = 1; i <= n; i++)
             {
-                if (!visited.Contains(nums[i]))
+                if (!visited.Contains(i))
                 {
                     list.Add(i);
                 }
