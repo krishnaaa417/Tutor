@@ -40,7 +40,7 @@ namespace Tutor.PreviousInterviewsQuestions
 
                 if (sum == target)
                 {
-                    for (int j = i - size +1; j <= i; j++)
+                    for (int j = i - size +1; j <= i; j++) // I need to print 3 numbers soo
                     {
                         Console.WriteLine(nums[j]);
                     }

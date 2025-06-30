@@ -10,7 +10,7 @@ namespace Tutor.MathPrograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Reverse-Number.."+Integers(296));
+            Console.WriteLine("Reverse-Number.."+Integers(-296));
         }
 
         private static int Integers(int n)
