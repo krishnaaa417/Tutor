@@ -11,7 +11,7 @@ namespace Tutor.SlidingWindow
         static void Main(string[] args)
         {
             int[] n = { 1, 3, 5, 4, 8, 1, 2, 4, 5, 6 };
-            Console.WriteLine(SlidingWindowApproach(n));
+            Console.WriteLine(BruteForceApproach(n));
         }
 
         private static int BruteForceApproach(int[] arr)
@@ -38,35 +38,6 @@ namespace Tutor.SlidingWindow
 
            
            
-        }
-
-        private static int SlidingWindowApproach(int[] arr)
-        {
-            int n = arr.Length;
-            int subarray = 3;
-            if (n < subarray) return 0; // Handle edge case where array size is smaller than subarray size
-
-            int left = 0;
-            int sum = 0;
-            int maxx = int.MinValue;
-
-            // Compute initial sum of first 'subarray' elements
-            for (int i = 0; i < subarray; i++)
-            {
-                sum += arr[i];
-            }
-            maxx = sum;
-
-            // Sliding Window technique
-            for (int right = subarray; right < n; right++)
-            {
-                sum = sum - arr[left] + arr[right]; // Slide the window by removing leftmost element and adding rightmost
-                left++; // Move the window forward
-                maxx = Math.Max(maxx, sum); // Update max sum
-            }
-
-            return maxx; // Return the maximum found
-
         }
     }
 }

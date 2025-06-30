@@ -45,34 +45,21 @@ namespace Tutor.TwoPointerApproach
         private static int[] prefix(int[] nums)
         {
             int n = nums.Length;
-            int[] output = new int[n];
+            int[] prefix = new int[n];
 
-            output[0] = 1;
+            prefix[0] = nums[0];
+
             for (int i = 1; i < n; i++)
             {
-                output[i] = output[i - 1] * nums[i];
+                prefix[i] = prefix[i - 1] + nums[i];
             }
 
-            for (int i = 0; i < output.Length; i++)
+            for (int i = 0; i < prefix.Length; i++)
             {
-                Console.WriteLine(output[i]);
+                Console.WriteLine(prefix[i]);
             }
-            Console.WriteLine("-----");
-
-            int suffix = 1;
-
-            for (int i = n - 1; i >= 0; i--)
-            {
-                output[i] = suffix * nums[i];
-                //suffix = suffix * nums[i];
-            }
-
-            for (int i = 0; i < output.Length; i++)
-            {
-                Console.WriteLine(output[i]);
-            }
-
-            return output;
+            Console.WriteLine("----");
+            return prefix;
         }
     }
 
