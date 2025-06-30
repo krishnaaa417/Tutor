@@ -20,7 +20,7 @@ namespace Tutor.TCS
             HashSet<int> visited = new HashSet<int>(nums);
             List<int> list = new List<int>();
 
-            for (int i = 1; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
                 if (!visited.Contains(nums[i]))
                 {
