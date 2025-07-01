@@ -10,7 +10,8 @@ namespace Tutor.TCS
     {
         static void Main(string[] args)
         {
-            string[] s = { "5", "-2", "4", "C", "D", "9", "+", "+" };
+            string[] s = { "5", "2", "C", "D", "+" };
+            Console.WriteLine(OptimizedApproach(s));
 
         }
 
@@ -25,6 +26,37 @@ namespace Tutor.TCS
             
 
             return s.Length;
+        }
+
+        private static int OptimizedApproach(string[] s)
+        {
+            int n = s.Length;
+            Stack<int> stack = new Stack<int>();
+
+            foreach (var result in s)
+            {
+                if (result == "C")
+                {
+                    stack.Pop();
+                }
+                else if (result == "D")
+                {
+                    stack.Push(stack.Peek() * 2);
+                }
+                else if(result == "+")
+                {
+                     int top1 = stack.Pop();
+                    int top2 = stack.Peek();
+                    int sum = top1 + top2;
+                    stack.Push(top1);
+                    stack.Push(sum);
+                }
+                else
+                {
+                    stack.Push(int.Parse(result));
+                }
+            }
+            return stack.Sum();
         }
     }
 }
