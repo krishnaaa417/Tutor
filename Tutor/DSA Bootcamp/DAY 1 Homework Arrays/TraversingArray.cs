@@ -11,9 +11,15 @@ namespace Tutor.DSA_Bootcamp.DAY_1_Homework_Arrays
         static void Main(string[] args)
         {
             int[] nums = { 22, 44, 2, -1, 99 };
+            int target = -21;
             // BasicOperation(nums);
             //Console.WriteLine(SumOfElements(nums));
-            Console.WriteLine(AverageOfElements(nums));
+            // Console.WriteLine(AverageOfElements(nums));
+            // Console.WriteLine(MinValue(nums));
+            // Console.WriteLine(MaxValue(nums));
+            //Console.WriteLine(COuntOfEvenNumber(nums));
+            // Console.WriteLine(Searching(nums,target));
+            ReverseOrder(nums);
 
         }
 
@@ -23,7 +29,7 @@ namespace Tutor.DSA_Bootcamp.DAY_1_Homework_Arrays
 
             for (int i = 0; i < n; i++)
             {
-                Console.WriteLine("index"+i+":"+nums[i]);
+                Console.WriteLine("index" + i + ":" + nums[i]);
             }
         }
 
@@ -52,5 +58,73 @@ namespace Tutor.DSA_Bootcamp.DAY_1_Homework_Arrays
             average = (double)sum / n;
             return average;
         }
+
+        private static int MinValue(int[] nums)
+        {
+            int min = int.MaxValue;
+            int n = nums.Length;
+
+            for (int i = 0; i < n; i++)
+            {
+                if (nums[i] < min)
+                {
+                    min = nums[i];
+                }
+            }
+            return min;
+        }
+
+        private static int MaxValue(int[] nums)
+        {
+            int max = int.MinValue;
+            int n = nums.Length;
+
+            for (int i = 0; i < n; i++)
+            {
+                if (nums[i] > max)
+                {
+                    max = nums[i];
+                }
+            }
+            return max;
+        }
+
+        private static int COuntOfEvenNumber(int[] nums)
+        {
+            int count = 0;
+            int n = nums.Length;
+            for (int i = 0; i < n; i++)
+            {
+                if (nums[i] % 2 == 0)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        private static bool Searching(int[] nums, int target)
+        {
+            bool b = false;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (target == nums[i])
+                {
+                    b = true; break;
+                }
+            }
+            return b;
+        }
+
+        private static void ReverseOrder(int[] nums)
+        {
+            int n = nums.Length;
+            for (int i = n-1; i >= 0; i--)
+            {
+                Console.WriteLine(nums[i]);
+            }
+        }
+
     }
+
 }
