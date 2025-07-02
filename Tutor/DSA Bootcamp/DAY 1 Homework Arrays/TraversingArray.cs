@@ -12,7 +12,8 @@ namespace Tutor.DSA_Bootcamp.DAY_1_Homework_Arrays
         {
             int[] nums = { 22, 44, 2, -1, 99 };
             // BasicOperation(nums);
-            Console.WriteLine(SumOfElements(nums));
+            //Console.WriteLine(SumOfElements(nums));
+            Console.WriteLine(AverageOfElements(nums));
 
         }
 
@@ -29,13 +30,27 @@ namespace Tutor.DSA_Bootcamp.DAY_1_Homework_Arrays
         private static int SumOfElements(int[] nums)
         {
             int sum = 0;
-           int n = nums.Length;
+            int n = nums.Length;
 
             for (int i = 0; i < n; i++)
             {
                 sum += nums[i];
             }
             return sum;
+        }
+
+        private static double AverageOfElements(int[] nums)
+        {
+            double average = 0.0;
+            int sum = 0;
+            int n = nums.Length;
+
+            for (int i = 0; i < n; i++)
+            {
+                sum = sum + nums[i];
+            }
+            average = (double)sum / n;
+            return average;
         }
     }
 }
