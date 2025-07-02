@@ -10,16 +10,7 @@ namespace Tutor.DSA_Bootcamp.DAY_1_Homework_Arrays
     {
         static void Main(string[] args)
         {
-            int[] nums = { 22, 44, 2, -1, 99 };
-            int target = -21;
-            // BasicOperation(nums);
-            //Console.WriteLine(SumOfElements(nums));
-            // Console.WriteLine(AverageOfElements(nums));
-            // Console.WriteLine(MinValue(nums));
-            // Console.WriteLine(MaxValue(nums));
-            //Console.WriteLine(COuntOfEvenNumber(nums));
-            // Console.WriteLine(Searching(nums,target));
-            ReverseOrder(nums);
+            
 
         }
 
