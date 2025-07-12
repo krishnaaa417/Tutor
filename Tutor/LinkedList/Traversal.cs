@@ -28,6 +28,13 @@ namespace Tutor.LinkedList
                 head = head.next;
                 index++;
             }
+            Console.WriteLine("----");
+            while (head.next != null)
+            {
+                Console.WriteLine($"Node {index}: val = {head.val}, next = {(head.next != null ? head.next.val.ToString() : "null")}");
+                head = head.next;
+                index++;
+            }
         }
     }
 
