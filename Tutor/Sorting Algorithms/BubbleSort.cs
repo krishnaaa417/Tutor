@@ -10,14 +10,14 @@ namespace Tutor.Sorting_Algorithms
     {
         static void Main(string[] args)
         {
-            int[] nums = { 4, 5, 1, 3, 2 };
-            var result = BruteForceApproach(nums);
+            int[] nums = { 40, 70, 50, 3 };
+            var result = OptimizedApproach(nums);
 
             foreach (int i in nums)
             {
                 Console.WriteLine(i);
             }
-            
+
         }
 
         private static int[] BruteForceApproach(int[] nums)
@@ -25,16 +25,34 @@ namespace Tutor.Sorting_Algorithms
             int n = nums.Length;
             for (int i = 0; i < n; i++)
             {
-                for (int j = i+1; j < nums.Length; j++)
+                for (int j = i + 1; j < nums.Length; j++)
                 {
                     if (nums[i] > nums[j])
                     {
                         int temp = nums[i];
-                        nums[i]= nums[j];
-                        nums[j]= temp;
+                        nums[i] = nums[j];
+                        nums[j] = temp;
                     }
                 }
-                
+
+            }
+            return nums;
+        }
+
+        private static int[] OptimizedApproach(int[] nums)
+        {
+            int n = nums.Length;
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = 0; j < n - 1 - i; j++)
+                {
+                    if (nums[j] > nums[j + 1])
+                    {
+                        int temp = nums[j];
+                        nums[j] = nums[j + 1];
+                        nums[j+1] = temp;   
+                    }
+                }
             }
             return nums;
         }
