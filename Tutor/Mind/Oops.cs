@@ -10,7 +10,37 @@ namespace Tutor.Mind
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Abstraction..");
+            Animal animal = new Dog("Chintuu");
+            animal.Display();
+            animal.MakeSound();
+        }
+    }
+
+    public abstract class Animal
+    {
+        public string Name;
+
+        public Animal(string name)
+        {
+            this.Name = name;
+        }
+
+        // concrete method has implementation
+        public void Display()
+        {
+            Console.WriteLine("Animal.."+Name);
+        }
+        // Abstract Method :no implementation ,must be overridden
+        public abstract void MakeSound();
+
+    }
+
+    public class Dog : Animal
+    {
+        public Dog(string name) :base(name) { }
+        public override void MakeSound()
+        {
+            Console.WriteLine("Dog says BOW..BOW");
         }
     }
 }

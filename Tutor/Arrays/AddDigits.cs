@@ -15,9 +15,6 @@ namespace Tutor.Arrays
 
         }
 
-        private static int OptimizedOne(int num)
-        {
-            if (num < 0) return 0;
-        }
+        
     }
 }
