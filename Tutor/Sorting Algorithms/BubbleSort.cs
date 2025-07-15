@@ -10,7 +10,7 @@ namespace Tutor.Sorting_Algorithms
     {
         static void Main(string[] args)
         {
-            int[] nums = { 40, 70, 50, 3 };
+            int[] nums = { 2,0,2,1,1,0};
             var result = OptimizedApproach(nums);
 
             foreach (int i in nums)
