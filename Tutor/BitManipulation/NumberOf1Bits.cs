@@ -10,7 +10,20 @@ namespace Tutor.BitManipulation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Number-Of-One-Bits.");
+            Console.WriteLine("please enter a number..");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(OptimisedApproach(n)); ;
+        }
+
+        private static int OptimisedApproach(int n)
+        {
+            int count = 0;
+            while (n > 0)
+            {
+                n = n & (n - 1);
+                count++;
+            }
+            return count;
         }
     }
 }
