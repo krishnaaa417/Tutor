@@ -23,5 +23,23 @@ namespace Tutor.BitManipulation
             }
             return temp;
         }
+
+        private static int BruteForceApproach(int[] nums)
+        {
+            Array.Sort(nums);
+            int temp = 0;
+            int n = nums.Length;
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = i = 1; j < n; j++)
+                {
+                    if (nums[i] != nums[j])
+                    {
+                        temp = nums[i];
+                    }
+                }
+            }
+            return temp;
+        }
     }
 }
